@@ -32,6 +32,5 @@ with:
       repo: context.repo.repo,
       body: output
     })
-  name: Terraform Plan Status
-    if: steps.plan.outcome == 'failure'
-      run: exit 1
+name: Terraform Plan Status
+if: steps.planrun: exit 1
