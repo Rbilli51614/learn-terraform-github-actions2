@@ -11,10 +11,10 @@ provider "aws" {
 terraform {
 
   cloud {
-    organization = "FlemingFriday"
+    organization = "Michael_Royce"
 
     workspaces {
-      name = "learn-terraform-github-actions"
+      name = "Armageddon-Royce"
     }
   }
 
