@@ -5,12 +5,12 @@ on:
 env:
   TF_CLOUD_ORGANIZATION: "Michael_Royce"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN2 }}"
-  TF_WORKSPACE: "Armageddon-Royce"
+  TF_WORKSPACE: "learn-terraform-github-actions2"
   CONFIG_DIRECTORY: "./"
 jobs:
   terraform:
     - name: "Terraform"
-      if: github.repository != 'https://github.com/Rbilli51614/learn-terraform-github-actions2.git'
+      if: github.repository != 'rbilli51614/learn-terraform-github-actions2'
     - name: "Terraform Plan"
       runs-on: ubuntu-latest
       permissions:
@@ -43,8 +43,8 @@ jobs:
         id: plan-comment
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-    script: | 
-             { // 1. Retrieve existing bot comments for the PR
+            script: |
+              // 1. Retrieve existing bot comments for the PR
               const { data: comments } = await github.rest.issues.listComments({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
